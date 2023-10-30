@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/* main */
+.main{
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  display: flex;
+}
+
+/* left */
+.left{
+  height: 100%;
+  width: 25%;
+}
+.logo{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  color: #000;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  position: absolute;
+  left: 2%;
+  top: 4%;
+}
+.addNoteBtn{
+  background: #000;
+  color: #fff;
+  position: relative;
+  top: 13%; 
+  left: 10%;
+  width: 80%;
+  height: 8%;
+  border-radius: 30px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: none;
+  outline: none;
+  cursor:pointer;
+}
+.add{
+  font-size: 2rem;
+}
+.caps{
+  text-transform: capitalize;
+}
+
+/* right */
+.right{
+  height: 100%;
+  width: 75%;
+  background: #F7ECDC;
+  position: relative;
+}
+.intro{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 20%;
+  left: 25%;
+}
+.welcomeImg{
+  height: 250px;
+  width: 500px;
+}
+.welLogo{
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.welTxt{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  margin-top: 15px;
+  color: #292929;
+}
+.encrypt{
+  width: 20%;
+  height: 8%;
+  position: absolute;
+  bottom: 0;
+  left: 40%;
+  display: flex;
+  align-items: center;
+}
+.encImg{
+  width: 14px;
+  height: 16px;
+}
+.encMsg{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  padding-left: 10px;
+}
