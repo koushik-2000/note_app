@@ -1,0 +1,382 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --display1: block;
+  --display2: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+}
+
+/* container */
+
+.container {
+  width: 100%;
+  height: 100svh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+
+.left_section {
+  width: 100%;
+  height: 100svh;
+  padding: 2em 0 2em 2em;
+  display: var(--display1);
+}
+
+@media screen and (min-width: 768px) {
+  .left_section {
+    display: block !important;
+    flex: 0.3;
+    height: 100%;
+  }
+  .right_section {
+    display: block !important;
+    flex: 0.7;
+    height: 100%;
+  }
+}
+
+.left_section .header {
+  color: #000;
+  font-size: 31.52px;
+  font-weight: 500;
+  letter-spacing: 0.63px;
+}
+
+.create_btn {
+  width: 326px;
+  height: 42px;
+  flex-shrink: 0;
+  border-radius: 37.318px;
+  background: #000;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  margin: 1em 0;
+}
+
+.group_list {
+  width: 100%;
+  height: calc(100% - 100px);
+  overflow: hidden auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.group_list::-webkit-scrollbar {
+  width: 5px;
+}
+.group_list::-webkit-scrollbar-thumb {
+  width: 4px;
+  background: #bdbdbd;
+  border-radius: 4px;
+}
+
+.group_list .group {
+  width: 411px;
+  height: 98px;
+  flex-shrink: 0;
+  font-size: 20.67px;
+  border-radius: 32px 0px 0px 32px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 1em;
+  padding: 0.5em;
+}
+
+.avatar {
+  width: 62.015px;
+  height: 62.015px;
+  flex-shrink: 0;
+  font-size: 24.115px;
+  border-radius: 50px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+}
+
+.active {
+  background: #f7ecdc;
+}
+
+/* right section */
+
+.right_section {
+  width: 100%;
+  height: 100svh;
+  background: #f7ecdc;
+  overflow: hidden;
+  position: relative;
+  display: var(--display2);
+}
+
+.group_header {
+  width: 100%;
+  height: 66px;
+  flex-shrink: 0;
+  background: #e8e8e8;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
+}
+
+.group_avatar {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  background: #0047ff;
+  border-radius: 50px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 16.8px;
+  font-weight: 500;
+  line-height: 97.688%;
+  letter-spacing: 0.336px;
+}
+
+.group_heading {
+  color: #000;
+  font-size: 16.72px;
+  font-weight: 500;
+  letter-spacing: 0.334px;
+}
+
+.input_box {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 130px;
+  flex-shrink: 0;
+  background: #e8e8e8;
+  padding: 1em;
+}
+
+.input_box textarea {
+  width: 100%;
+  height: 100%;
+  padding: 1em 2em;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+}
+
+.input_box .send_btn {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: 2em;
+  right: 2em;
+  background: #fff;
+  display: grid;
+  place-items: center;
+}
+
+.notes_list {
+  width: 100%;
+  height: calc(100% - 196px);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+.notes_list::-webkit-scrollbar {
+  width: 5px;
+}
+.notes_list::-webkit-scrollbar-thumb {
+  width: 4px;
+  background: #bdbdbd;
+  border-radius: 4px;
+}
+
+.note {
+  display: flex;
+  flex-direction: row;
+  padding: 1em;
+}
+
+.note .time {
+  width: 30%;
+  color: #353535;
+  font-size: 13.587px;
+  font-weight: 500;
+  letter-spacing: 0.272px;
+}
+
+.note .content {
+  word-wrap: break-word;
+  width: 70%;
+  color: #000;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 160.188%;
+  letter-spacing: 0.455px;
+}
+
+/* modal */
+
+.modal_container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+}
+
+.modal {
+  width: 324px;
+  height: 251px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  z-index: 999;
+}
+
+.modal_close_area {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.modal .modal_header {
+  font-size: 18.396px;
+  font-weight: 500;
+  line-height: 160.188%;
+  letter-spacing: 0.644px;
+}
+
+.modal .group_name {
+  width: 150px;
+  height: 23px;
+  flex-shrink: 0;
+  border-radius: 9.716px;
+  padding: 0 1em;
+  border: 0.883px solid #ccc;
+  background: #fff;
+  font-size: 10px;
+}
+
+.group_name::placeholder {
+  color: #979797;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 160.188%;
+  letter-spacing: 0.35px;
+}
+
+.modal .createbtn {
+  width: 186px;
+  height: 32px;
+  margin-top: 2em;
+  flex-shrink: 0;
+  border-radius: 6px;
+  background: #000;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 160.188%;
+  letter-spacing: 0.595px;
+}
+
+.row {
+  margin: 0.25em 0;
+}
+
+.color_picker {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.color_picker > div {
+  border: 1px solid transparent;
+  width: 17.666px;
+  height: 17.666px;
+  border-radius: 100%;
+  z-index: 999;
+}
+
+.violet {
+  background: #b38bfa;
+}
+
+.pink {
+  background: #ff79f2;
+}
+
+.cyan {
+  background: #43e6fc;
+}
+
+.brown {
+  background: #f19576;
+}
+
+.blue {
+  background: #0047ff;
+}
+
+.navy {
+  background: #6691ff;
+}
+
+.modal > .row {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.blank_templete {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.blank_templete img {
+  width: 70%;
+  height: 40%;
+  flex-shrink: 0;
+}
+
+.blank_templete h1 {
+  color: #000;
+  font-size: 42px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.blank_templete p {
+  width: max(60%, 300px);
+  text-align: justify;
+  color: #292929;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0.44px;
+}
